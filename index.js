@@ -27,6 +27,19 @@ client.on('message', message =>{
 
     else if(command === 'hello'){
     	message.channel.send(`Hi, what's up?`);
+	    
+    }
+    
+    else if (command === 'ban') {
+        const user = message.mentions.users.first();
+        guild.members.ban(user);
+        message.channel.send('banned successfully!');
+    }
+
+    else if (command === 'kick') {
+        const member = message.mentions.members.first();
+                member.kick();
+        message.channel.send('Kicked successfully!');
     }
 
     else if(command === 'games') {
