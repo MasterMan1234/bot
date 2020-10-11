@@ -28,20 +28,7 @@ client.on('message', message =>{
     else if(command === 'hello'){
     	message.channel.send(`Hi, what's up?`);
     }
-	
-    
-    else if (command === 'ban') {
-        const user = message.mentions.users.first();
-        guild.members.ban(user);
-        message.channel.send('banned successfully!');
-    }
 
-    else if (command === 'kick') {
-        const member = message.mentions.members.first();
-                member.kick();
-        message.channel.send('Kicked successfully!');
-    }
-	
     else if(command === 'games') {
     	message.channel.send('try these ones: \n https://Krunker.io \n https://slither.io \n https://minecraft.net \n https://aquapark.io \n https://surviv.io \n https://arpantaneja.github.io');
     }
